@@ -7,10 +7,10 @@ import { sfd, gallery } from '../data';
 ---
 
 <Layout title={`Gallery - ${sfd.shortTitle}`}>
-  <Nav solid />
+  <Nav notFixed={true} />
 
   <main>
-    <section class="gallery-page">
+    <section class="">
       <h1>Gallery</h1>
       
       {gallery.years.map(yearData => (
@@ -20,7 +20,7 @@ import { sfd, gallery } from '../data';
             {yearData.images.length > 0 ? (
               yearData.images.map(image => (
                 <div class="gallery-item">
-                  <img src={`${yearData.path}/${image}`} alt={`SFD ${yearData.year}`} />
+                  <img src={`${yearData.path}/${image}`} alt={`SFD ${yearData.year}`} title={`${yearData.path}/${image}`}/>
                 </div>
               ))
             ) : (
@@ -37,7 +37,7 @@ import { sfd, gallery } from '../data';
 
 <style>
   .gallery-page {
-    padding: 2rem;
+    padding: 10rem;
     max-width: 1200px;
     margin: 0 auto;
   }

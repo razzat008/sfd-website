@@ -106,13 +106,3 @@ nav.not-fixed {
   position: unset;
   background: var(--bg-header-footer);
 }
-
-nav.solid {
-  background: var(--bg-header-footer);
-  box-shadow: var(--shadow-1);
-  backdrop-filter: blur($blur);
-
-  ul {
-    background: var(--bg-header-footer);
-  }
-}
